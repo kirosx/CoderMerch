@@ -1,4 +1,4 @@
-"""CoderMerch URL Configuration
+"""codermerch URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mainapp.views import test_page
 
 urlpatterns = [
+    path('', test_page),
     path('admin/', admin.site.urls),
 ]
