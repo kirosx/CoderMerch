@@ -5,10 +5,139 @@
 html, body
   height: 100%
 
+// ширина контента
+$main-width: 1200px
+
+/* --- Начало: прижатие футера --- */
+main
+  flex: 1 0 auto
+
+footer
+  flex: 0 0 auto
+/* --- Конец: прижатие футера --- */
+
+/* --- Начало: Гамбургер --- */
+.animated-icon1, .animated-icon2, .animated-icon3
+  width: 30px
+  height: 20px
+  position: relative
+  margin: 0
+  -webkit-transform: rotate(0deg)
+  -moz-transform: rotate(0deg)
+  -o-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: .5s ease-in-out
+  -moz-transition: .5s ease-in-out
+  -o-transition: .5s ease-in-out
+  transition: .5s ease-in-out
+  cursor: pointer
+
+
+.animated-icon1 span
+  display: block
+  position: absolute
+  height: 3px
+  width: 100%
+  border-radius: 9px
+  opacity: 1
+  left: 0
+  -webkit-transform: rotate(0deg)
+  -moz-transform: rotate(0deg)
+  -o-transform: rotate(0deg)
+  transform: rotate(0deg)
+  -webkit-transition: .25s ease-in-out
+  -moz-transition: .25s ease-in-out
+  -o-transition: .25s ease-in-out
+  transition: .25s ease-in-out
+
+.animated-icon1 span
+  background: #4dd0e1
+
+.animated-icon1 span:nth-child(1)
+  top: 0
+
+.animated-icon1 span:nth-child(2)
+  top: 10px
+
+.animated-icon1 span:nth-child(3)
+  top: 20px
+
+.animated-icon1.open span:nth-child(1)
+  top: 11px
+  -webkit-transform: rotate(135deg)
+  -moz-transform: rotate(135deg)
+  -o-transform: rotate(135deg)
+  transform: rotate(135deg)
+
+.animated-icon1.open span:nth-child(2)
+  opacity: 0
+  left: -60px
+
+.animated-icon1.open span:nth-child(3)
+  top: 11px
+  -webkit-transform: rotate(-135deg)
+  -moz-transform: rotate(-135deg)
+  -o-transform: rotate(-135deg)
+  transform: rotate(-135deg)
+/* --- Конец: Гамбургер --- */
+
+/* --- Начало: Поиск --- */
+.active-cyan-4 input[type=text]:focus:not([readonly])
+  border: 1px solid #4dd0e1
+  box-shadow: 0 0 0 1px #4dd0e1
+/* --- Конец: Поиск --- */
+
+/* --- Начало: Иконки хэдэра --- */
+.header-heart-color:hover
+  color: hotpink
+  transition: cubic-bezier(0, 0, 0, 1) 2s
+
+.header-heart-color:active
+  color: red
+
+.header-user-color:hover
+  color: #1de9b6
+  transition: cubic-bezier(0, 0, 0, 1) 2s
+
+.header-user-color:active
+  color: #2e7d32
+
+.header-basket-color:hover
+  color: #4dd0e1
+  transition: cubic-bezier(0, 0, 0, 1) 2s
+
+.header-basket-color:active
+  color: #00838f
+/* --- Конец: Иконки хэдэра --- */
+
+/* --- Начало: Скрол --- */
+::-webkit-scrollbar
+  width: 6px
+  background-color: #F5F5F5
+
+::-webkit-scrollbar-thumb
+  border-radius: 10px
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+  background-color: #4dd0e1
+/* --- Конец: Скрол --- */
 
 
 
 
 
-.ma-color
-  background-color: #00b0ff
+main
+  max-width: $main-width
+  padding: 100px
+  height: 2000px
+
+.header-dropdown-item:hover
+  background-color: #757575
+
+.header-fa-size
+  font-size: 25px
+  color: white
+
+.footer__social-icon:hover
+  color: #4dd0e1
+  transition: cubic-bezier(0, 0, 0, 1) 2s
+
