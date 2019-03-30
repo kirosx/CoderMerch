@@ -20,9 +20,9 @@
 
 <header class="navbar fixed-top navbar-expand-lg navbar-dark elegant-color scrolling-navbar flex-column p-0 mx-0">
   <!-- Самая верхняя менюшка -->
-  <div class="container-fluid justify-content-center grey darken-2 border-bottom wow fadeInUp">
+  <div class="container-fluid justify-content-center grey darken-2 wow fadeInUp">
     <nav class="container mx-0 p-0 d-flex justify-content-between align-items-center">
-      <div class="col-4 text-white pt-1">
+      <div class="col-4 text-white pt-1 pl-0">
         <p class="navbar-brand logo-transform p-0 m-0" href="#">
           <span class="logo-transform-your pr-1">Your</span>
           <span class="logo-transform-co">co</span>
@@ -34,7 +34,7 @@
         </p>
       </div>
       <div class="col-6 flex-wrap d-flex justify-content-end">
-        <a href="#" class="text-white p-0 mx-2 text-danger">SALE</a>
+        <a href="#" class="text-white p-0 mx-2 text-danger font-weight-bold">SALE</a>
         <a href="#" class="text-white p-0 mx-2">About team</a>
         <a href="#" class="text-white p-0 mx-2">Delivery-payment</a>
         <a href="#" class="text-white p-0 mx-2">Contact</a>
@@ -44,7 +44,7 @@
 
   <div class="container wow fadeInDown">
     <!-- Navbar brand -->
-    <a class="navbar-brand wow rollIn" href="#"><img src="static/img/logo.png" alt=""></a>
+    <a class="navbar-brand pl-1 wow rollIn" href="#"><img class="coder-merch-brand-size" src="static/img/logo.png" alt=""></a>
 
     <!-- Гамбургер -->
     <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -101,11 +101,11 @@
           </div>
         </form>
         <div class="mt-2 justify-content-around">
-          <a href="#" class="mx-2 text-center">
-            <i class="far fa-heart header-fa-size header-heart-color wow swing delay-1s"></i>
-          </a>
           <a href="#" class="mx-2 text-center" data-toggle="modal" data-target="#modalLoginForm">
             <i class="far fa-user header-fa-size header-user-color wow swing delay-1s"></i>
+          </a>
+          <a href="#" class="mx-2 text-center">
+            <i class="far fa-heart header-fa-size header-heart-color wow swing delay-1s"></i>
           </a>
           <a href="#" class="mx-2 text-center">
             <i class="fas fa-shopping-bag header-fa-size header-basket-color wow swing delay-1s"></i>
@@ -118,7 +118,7 @@
 </header>
 
 
-<main class="d-flex flex-column mx-auto">
+<main class="d-flex flex-column">
   <!-- Модалка для логина-->
   <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
        aria-hidden="true">
@@ -153,16 +153,69 @@
   </div>
   <!-- Модалка длялогина -->
 
-  <p>контент сюда</p>
+  <article class="container-fluid coder-merch-main-photo-color d-flex align-items-center justify-content-center">
+    <div>
+      <img src="../static/img/main_photo1.jpg" alt="" class="container d-block coder-merch-main-photo-size">
+    </div>
+  </article>
 
+  <article class="container-fluid yellow my-3">
+    <h2 class="text-center text-uppercase py-2 m-0">Реши легкую задачу и получи 10% скидки</h2>
+  </article>
+  <section>
+  <div class="container-fluid grey darken-2">
+    <h2 class="text-center text-uppercase py-2 m-0 coder-merch-custom-font yellow-text">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+  </div>
+  <div class="container-fluid d-flex justify-content-between flex-wrap coder-merch-main-new-size my-3">
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product1.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product2.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product3.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product4.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product5.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product6.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product7.jpg" alt="" width="288">
+      </a>
+    </div>
+    <div class=" text-center">
+      <a href="">
+        <img class="" src="../static/img/product8.jpg" alt="" width="288">
+      </a>
+    </div>
+  </div>
+  </section>
 </main>
-
 
 <!-- Footer -->
 <footer class="page-footer text-center font-small elegant-color-dark wow fadeIn">
 
   <!-- Footer Elements -->
-  <div class="container-fluid border-bottom">
+  <div class="container-fluid">
 
     <!-- Grid row-->
     <div class="row grey darken-2">
@@ -193,7 +246,7 @@
     </div>
   </div>
   <div class="footer-copyright text-center d-flex flex-column">
-    <a href="#" class=" py-3"><img src="static/img/logo_down.png" alt=""></a>
+    <a href="#" class=" py-3"><img class="coder-merch-brand-size" src="static/img/logo_down.png" alt=""></a>
     <p class="">&copy;&nbsp;Copyright&nbsp;2019:<a href="#"> Team CoderMerch</a></p>
   </div>
 </footer>

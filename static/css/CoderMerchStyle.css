@@ -8,6 +8,12 @@ html, body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Phosphate - Inline";
+  src: url("../font/Phosphate.ttc") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 /* --- Начало: прижатие футера --- */
 main {
   flex: 1 0 auto;
@@ -228,9 +234,7 @@ footer {
 
 /* --- Конец: Мозайка --- */
 main {
-  max-width: 1200px;
-  padding: 150px;
-  height: 1000px;
+  padding-top: 102px;
 }
 
 .header-dropdown-item:hover {
@@ -252,8 +256,37 @@ main {
   color: white;
 }
 
+.coder-merch-brand-size {
+  max-width: 113px;
+}
+
+.coder-merch-main-photo-size {
+  max-width: 1200px;
+}
+
+.coder-merch-main-photo-color {
+  background-color: #00dff0;
+  width: 100%;
+}
+
+.coder-merch-custom-font {
+  font-family: "Phosphate - Inline";
+}
+
+.coder-merch-main-new-size {
+  max-width: 1200px;
+}
+
+.coder-merch-main-new-size-photo {
+  max-height: 165px;
+}
+
 /* --- Начало: Медиазапросы --- */
 @media screen and (max-width: 500px) {
+  main {
+    padding-top: 133px;
+  }
+
   .coder-merch-right-menu-media500 {
     flex-direction: column;
     align-items: center;

@@ -8,6 +8,14 @@ html, body
 // ширина контента
 $main-width: 1200px
 
+// кастомный шрифт
+@font-face
+  font-family: "Phosphate - Inline"
+  src: url("../font/Phosphate.ttc") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
 /* --- Начало: прижатие футера --- */
 main
   flex: 1 0 auto
@@ -199,9 +207,8 @@ footer
 
 
 main
-  max-width: $main-width
-  padding: 150px
-  height: 1000px  // высота для теста
+  //max-width: $main-width
+  padding-top: 102px
 
 .header-dropdown-item:hover
   background-color: #757575
@@ -218,17 +225,36 @@ main
   background-color: #616161
   color: white
 
+.coder-merch-brand-size
+  max-width: 113px
 
+.coder-merch-main-photo-size
+  max-width: $main-width
 
+.coder-merch-main-photo-color
+  background-color: #00dff0
+  width: 100%
 
+.coder-merch-custom-font
+  font-family: "Phosphate - Inline"
+
+.coder-merch-main-new-size
+  max-width: $main-width
+
+.coder-merch-main-new-size-photo
+  max-height: 165px
 
 
 /* --- Начало: Медиазапросы --- */
 @media screen and (max-width: 500px)
+  main
+    padding-top: 133px
+
   .coder-merch-right-menu-media500
     flex-direction: column
     align-items: center
     justify-content: center
+
 
 /* --- Конец: Медиазапросы --- */
 
