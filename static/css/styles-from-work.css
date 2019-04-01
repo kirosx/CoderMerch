@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Начало: страница about --- */
+@font-face {
+  font-family: Phosphate-Inline;
+  src: url("../font/Phosphate-Inline.ttf");
+}
+
+.about-team {
+  font-family: Phosphate-Inline;
+  text-transform: uppercase;
+  font-size: 23pt;
+  background-color: #383838;
+  color: #e6db74;
+  vertical-align: middle;
+  text-align: center;
+  height: 50px;
+}
+
+.cont-fluid {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 150px;
+}
+
+.about-blabla {
+  font-family: Raleway;
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.about-blabla .about-blabla-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.about-blabla .about-blabla-img img {
+  width: auto;
+  height: 100%;
+  margin: 0 -80px auto;
+}
+
+.about-developers {
+  font-family: Raleway;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 23pt;
+  padding-top: 54px;
+}
+
+/* --- Конец: страница about --- */

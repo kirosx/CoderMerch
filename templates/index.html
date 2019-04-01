@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +14,10 @@
     <!-- Material Design Bootstrap -->
     <link href="static/css/mdb.min.css" rel="stylesheet">
     <!-- Наши стили -->
+    <link href="static/css/styles-from-work.css" rel="stylesheet">
     <link href="static/css/CoderMerchStyle.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png">
 </head>
 
 <body class="d-flex flex-column">
@@ -80,9 +84,7 @@
 
 <main class="d-flex flex-column mx-auto">
     <p>Главная > О команде</p>
-    <div class="text-center about-team">
-        <h4 class="about-team">О команде</h4>
-    </div>
+    <div class="cont-fluid about-team">О команде</div>
     <div class="text-center about-blabla">
         <p>
             Данный проект разработан студентами GeekUniversity от GeekBrains Mail.Ru Group, факультета
@@ -92,65 +94,63 @@
             GitHub/Trello/Discord.
         </p>
     </div>
-    <div class="about-developers">
-        разработчики
-    </div>
+    <div class="about-developers">разработчики</div>
     <div class="row">
         <div class="col-12 col-sm-12  col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">
             <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>
-            <div class="about-dev-name">вася пупкин</div>
+            <div class="text-uppercase font-weight-bold">вася пупкин</div>
             Разрабатывает с 2 лет. <br>
             Учился на слесаря <br>
-            <span>Роль:</span> построил ракету
+            <span class="font-weight-bold">Роль:</span> построил ракету
         </div>
     </div>
 </main>
