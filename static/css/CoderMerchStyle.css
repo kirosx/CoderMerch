@@ -23,7 +23,7 @@ footer {
   width: 30px;
   height: 20px;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -142,7 +142,6 @@ footer {
 /* --- Конец: Скрол --- */
 
 /* --- Начало: страница about --- */
-/*
 @font-face {
   font-family: Phosphate-Inline;
   src: url("../font/Phosphate-Inline.ttf");
@@ -154,25 +153,22 @@ footer {
   background-color: #383838;
   color: #e6db74;
   vertical-align: middle;
-  margin-bottom: 54px;
-  height: 38px;
+  text-align: center;
+  height: 50px;
+}
+
+.cont-fluid {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 150px;
 }
 
 .about-blabla {
   font-family: Raleway;
   font-size: 14pt;
   text-align: center;
-  padding-bottom: 54px;
-  position: inherit;
-}
-
-.about-blabla .about-dev-name {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.about-blabla span {
-  font-weight: bold;
+  margin-top: 100px;
 }
 
 .about-blabla .about-blabla-img {
@@ -195,13 +191,31 @@ footer {
   text-align: center;
   font-weight: bold;
   font-size: 23pt;
-  padding-bottom: 54px;
+  padding-top: 54px;
 }
-*/
+
+.navi li {
+  font-family: Raleway;
+}
+
+.navi-search input {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  height: 25px;
+}
+
+html, body {
+  background-color: #f6f6f6;
+}
+
+main {
+  padding: 100px 1px 100px 1px;
+}
 /* --- Конец: страница about --- */
+
+
 main {
   max-width: 1200px;
-  padding: 100px 50px 25px 25px;
 }
 
 .header-dropdown-item:hover {
