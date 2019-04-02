@@ -135,3 +135,6 @@ venv
 ### Temp folders ###
 temp
 *.sock
+
+### SASS ###
+.sass-cache/

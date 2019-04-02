@@ -1,3 +1,17 @@
+// переменные
+
+// ширина контента
+$main-width: 1140px
+
+//цвета
+$grey: #383838
+$black: #1e1e1e
+$yellow: #e6db74
+$blue: #66dgef
+$green: #a6e22e
+$white: #f6f6f6
+$pink: #f92672
+
 *
   margin: 0
   padding: 0
@@ -5,8 +19,26 @@
 html, body
   height: 100%
 
-// ширина контента
-$main-width: 1200px
+
+// кастомный шрифт
+@font-face
+  font-family: "Phosphate - Inline"
+  src: url("../font/Phosphate.ttc") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: 'Raleway'
+  src: url('../font/Raleway-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Raleway'
+  src: url('../font/Raleway-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+
 
 /* --- Начало: прижатие футера --- */
 main
@@ -121,17 +153,98 @@ footer
   background-color: #4dd0e1
 /* --- Конец: Скрол --- */
 
+/* --- Начало: Мозайка --- */
+.logo-transform
+  display: flex
+  width: 80px
+  height: 40px
+  letter-spacing: 2px
+
+.logo-transform-your
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: rotate(360deg) translate(80px, 8px)
+  color: $green
+
+.logo-transform-co
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(20px, -10px)
+  color: $green
+
+.logo-transform-de
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(50px, 20px)
+  color: $green
+
+.logo-transform-you
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(-60px, 20px)
+  color: #66d9ef
+
+.logo-transform-and
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(-55px, 10px)
+  color: #66d9ef
+
+.logo-transform-br
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: skew(-20deg, 20deg) translate(20px, -10px)
+  color: #66d9ef
+
+.logo-transform:hover .logo-transform-your
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+
+.logo-transform:hover .logo-transform-co
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+
+.logo-transform:hover .logo-transform-de
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+
+.logo-transform:hover .logo-transform-you
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+
+.logo-transform:hover .logo-transform-and
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+
+.logo-transform:hover .logo-transform-br
+  display: block
+  transition: all 0.5s ease-in-out
+  transform: translate(0px, 0px)
+/* --- Конец: Мозайка --- */
 
 
 
+body
+  background-color: $white
+  font-family: "Raleway", sans-serif
 
 main
-  max-width: $main-width
-  padding: 100px
-  height: 2000px
+  //max-width: $main-width
+  padding-top: 102px
 
-.header-dropdown-item:hover
-  background-color: #757575
+.header-dropdown-menu
+  background-color: $grey
+
+.header-dropdown-item
+  color: $white !important
+
+  &:hover
+    background-color: $black
 
 .header-fa-size
   font-size: 25px
@@ -140,4 +253,138 @@ main
 .footer__social-icon:hover
   color: #4dd0e1
   transition: cubic-bezier(0, 0, 0, 1) 2s
+
+.coder-merch-search-bg
+  padding-left: 25px
+  background-color: $black
+  color: #323232
+  border: none
+  border-radius: 30px
+
+.search-place
+  position: relative
+
+.search-icon
+  position: absolute
+  top: 15%
+  margin-left: 5px
+  margin-top: 2px
+  z-index: 1
+  color: #4f5b66
+
+.coder-merch-brand-size
+  max-width: 113px
+
+.coder-merch-main-photo-size
+  max-width: $main-width
+
+.coder-merch-main-photo-color
+  background-color: #00dff0
+  width: 100%
+
+.coder-merch-custom-font
+  font-family: "Phosphate - Inline", serif
+
+.coder-merch-main-new-size
+  max-width: $main-width
+
+.coder-merch-main-new-size-photo
+  max-height: 165px
+
+.catalog-header
+  &-top
+    background-color: $black
+
+  &-bottom
+    background-color: $white
+
+    a
+      color: $black !important
+
+.catalog-header-top-list-item.active > .catalog-header-top-list-item-link
+  background-color: $white!important
+  color: $black !important
+
+.coder-merch-header
+  background-color: $grey
+  &-top
+    background-color: $black
+  &-bottom
+    justify-content: space-between
+    &-list
+      margin-block-start: 0
+      margin-block-end: 0
+      min-height: 59.02px
+      &-item
+        outline: 1px solid $black
+
+.coder-merch-header-bottom-list-item.active > .coder-merch-header-bottom-list-item-link
+  background-color: $black!important
+
+.catalog-menu
+  background-color: #ffffff
+  &-list
+    margin-block-start: 0
+    margin-block-end: 0
+    &-item
+      margin: 16px 0
+      min-width: 185px
+      &-link
+        border-radius: 30px
+        background-color: #eeeeee
+
+.catalog-menu-list-item.active > .catalog-menu-list-item-link
+  background-color: $grey!important
+  color: $yellow!important
+
+.sale-text
+  color: $pink!important
+
+.cm-font-title
+  color: $yellow
+
+.cm-bg-grey
+  background-color: $grey
+
+.cm-bg-black
+  background-color: $black
+
+.bg-tp-off
+  background-color: rgba(0,0,0,0)!important
+
+.cm-catalog-next
+  width: 350px
+  font-size: 33px
+  &:hover
+    background-color: $black
+    color: $yellow
+
+.catalog-preview-item
+  min-width: 280px
+  min-height: 280px
+
+
+/* --- Начало: Медиазапросы --- */
+@media screen and (max-width: 500px)
+  main
+    padding-top: 133px
+
+  .coder-merch-right-menu-media500
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+@media screen and (max-width: 1199px)
+  main
+    padding-top: 127px
+  .coder-merch-header-bottom
+    min-height: 83px
+
+@media screen and (max-width: 420px)
+  .coder-merch-header-top
+    display: none!important
+  main
+    padding-top: 83px
+
+/* --- Конец: Медиазапросы --- */
 
