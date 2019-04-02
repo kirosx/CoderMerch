@@ -1,0 +1,338 @@
+<!doctype html>
+<!-- @import "../packages/bootstrap-4.3.1/scss/bootstrap.scss" -->
+<!-- @import "../bootstrap-4.3.1/scss/bootstrap.scss"; -->
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CoderMerch</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="../static/css/mdb.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Наши стили -->
+    <link href="../static/css/CoderMerchStyle.css" rel="stylesheet">
+  </head>
+  
+  <body class="d-flex flex-column"> 
+    <header class="navbar fixed-top navbar-expand-lg navbar-dark elegant-color scrolling-navbar flex-column p-0 mx-0">
+      <!-- Самая верхняя менюшка -->
+      <div class="container-fluid justify-content-center  darken-2 wow fadeInUp coder-merch-durkMenu">
+        <nav class="container mx-0 p-0 d-flex justify-content-between align-items-center">
+          <div class="col-4 text-white pt-1 d-none d-sm-block">
+            <p class="navbar-brand logo-transform p-0 m-0" href="#">
+              <span class="logo-transform-your pr-1">Your</span>
+              <span class="logo-transform-co">co</span>
+              <span class="logo-transform-de pr-1">de</span>
+              <span class="text-danger  pr-1">-</span>
+              <span class="logo-transform-you  pr-1">your</span>
+              <span class="logo-transform-br">br</span>
+              <span class="logo-transform-and">and!</span>
+            </p>
+          </div>
+          <div class="col-12 col-sm-6 flex-wrap d-flex justify-content-end">
+            <a href="#" class="text-white p-0 mx-2 text-danger">SALE</a>
+            <a href="#" class="text-white p-0 mx-2">About team</a>
+            <a href="#" class="text-white p-0 mx-2">Delivery-payment</a>
+            <a href="#" class="text-white p-0 mx-2">Contact</a>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="container">
+    
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"><img src="../static/img/logo.png" alt=""></a>
+    
+        <!-- Гамбургер -->
+        <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Togglenavigation">
+          <div class="animated-icon1"><span></span><span></span><span></span></div>
+        </button>
+    
+        <!-- Схлопывается: Гамбургер -->
+        <div class="collapse navbar-collapse coder-merch-greyMenuWrap" id="navbarSupportedContent">
+    
+          <!-- Меню -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item  active">
+              <a class="nav-link" href="#">Мужчины</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Женщины</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Дети</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SALE</a>
+            </li>
+    
+            <!-- Выпадающий список -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">Информация</a>             
+              <div class="dropdown-menu dropdown-primary text-center" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item header-dropdown-item" href="#">Доставка и оплата</a>
+                <a class="dropdown-item header-dropdown-item" href="#">Контакты</a>
+                <a class="dropdown-item header-dropdown-item" href="#">О нас</a>
+              </div>
+            </li>
+          </ul>
+          <!-- Правая сторона -->
+          <form class="form-inline mx-2">
+            <div class="active-cyan-4">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+          <a href="#" class="mx-3"><i class="far fa-heart header-fa-size header-heart-color"></i></a>
+          <a href="#" class="mx-3"><i class="far fa-user header-fa-size header-user-color"></i></a>
+          <a href="#" class="mx-3"><i class="fas fa-shopping-bag header-fa-size header-basket-color"></i></a>
+        </div>
+        <!-- Схлопывается -->
+      </div>
+
+      <!-- Выпадающая менюшка -->
+      <div class="dropdown d-flex container-fluid bg-dark coder-merch-categoryMenu">
+        <div class="d-flex container flex-row ">
+          <a href="#" class="p-2 text-white">Вся одежда</a>
+          <a href="#" class="p-2 text-white">Женская одежда</a>
+          <a href="#" class="p-2 text-white active">Мужская одежда</a>
+          <a href="#" class="p-2 text-white">Детская одежда (девочки)</a>
+          <a href="#" class="p-2 text-white">Детская одежда (мальчики)</a>          
+        </div>
+      </div>
+
+      <!-- Навигационнще меню -->
+      <div class="container-fluid coder-merch-pathLine">
+        <div class="container">
+          <nav aria-label="breadcrumb"  class="coder-merch-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item"><a href="#">Мужская одежда</a></li>
+              <li class="breadcrumb-item"><a href="#">Толстовки</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Толстовка "Python"</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="d-flex flex-column">
+      <!-- Контейнер с заголовком "НАЗВАНИЕ ТОВАРА" -->
+      <div class="coder-merch-greyLineWrap">
+        <div class="container">
+            <p class="text-center">ТОЛСТОВКА “PYTHON”</p>
+        </div>
+      </div>
+      
+      <!-- ОСновной контент -->
+      <div class="container">
+        <div class="coder-merch-contentWrap">
+          <div class="d-flex flex-md-row flex-sm-column flex-column">
+            <!-- Список фотографий -->
+            <div class="d-flex flex-column justify-content-center align-items-center coder-merch-contentLeft col-lg-2 col-md-2">
+              <a class="" href="" role="button" data-slide="">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                <!-- <span class="sr-only">Previous</span> -->
+              </a>
+              <div>
+                <img src="../static/img/product/product1.jpg" alt="..." class="img-thumbnail">
+              </div>
+              <div>
+                <img src="../static/img/product/product1.jpg" alt="..." class="img-thumbnail">
+              </div>
+              <div>
+                <img src="../static/img/product/product1.jpg" alt="..." class="img-thumbnail">
+              </div>
+              <div>
+                <img src="../static/img/product/product1.jpg" alt="..." class="img-thumbnail">
+              </div>    
+              <a class="" href="" role="button" data-slide="">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                <!-- <span class="sr-only">Previous</span> -->
+              </a>
+            </div>
+          
+            <!-- Карусель с фотографиями -->
+            <div class="coder-merch-contentCenter d-flex col-lg-6 col-md-7 align-items-center" >
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../static/img/product/product1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../static/img/product/product1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../static/img/product/product1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+
+            <!-- Контент с информацией о тваре -->
+            <div class="d-flex flex-column justify-content-lg-center justify-content-md-start col-md-4 col-sm-12 coder-merch-contentRight ">
+              <!-- Название товара -->
+              <div class="coder-merch-nameProduct">
+                <p class="text-left">Бордовая толстовка с логотипом “Python”</p>  
+              </div>
+              <!-- Цена товара -->
+              <div class="coder-merch-priceProduct">
+                <p class="text-left"><span>2990</span> руб.</p>  
+              </div>
+              <!-- Артикул товара -->
+              <div class="coder-merch-colorArticleProduct">
+                  <p class="text-left"><span>Артикул:</span> T0123</p>  
+              </div>
+
+              <!-- Цвет товара -->
+              <div class="coder-merch-colorArticleProduct">
+                  <p class="text-left"><span>Цвет:</span> Бордовый</p>  
+              </div>
+
+              <!-- Выбор размера товара -->
+              <div class="dropdown show coder-merch-choiceSize">
+                  <a class="btn border border-secondary dropdown-toggle d-flex col-11 col-md-12 align-items-center justify-content-between text-muted bg-white rounded-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Пожалуйста, выберите размер
+                  </a>
+                  <div class="dropdown-menu col-11 col-md-12" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">S</a>
+                    <a class="dropdown-item" href="#">M</a>
+                    <a class="dropdown-item" href="#">L</a>
+                  </div>
+              </div>
+      
+              <!-- Кнопка добавления товара в корзину и в понравившееся -->
+              <div class="d-flex flex-lg-row flex-md-column justify-content-between coder-merch-addBasket">
+                <div class="col-lg-9 col-xl-10">
+                  <button type="button" class="btn btn-success rounded-0  text-dark font-weight-bold border-0">ДОБАВИТЬ В КОРЗИНУ</button>
+                </div>
+                <a href="#" class="mx-2 text-center rounded-circle bg-white d-flex align-items-center justify-content-center">
+                  <i class="far fa-heart header-fa-size header-heart-color wow swing delay-1s text-muted"></i>
+                </a>
+              </div>
+              <!-- Описание товара -->
+              <div class="coder-merch-descriptionProduct">
+                <p class="text-left">Разнообразный и богатый опыт консультация с широким активом играет важную роль в формировании существенных финансовых и административных условий. Равным образом сложившаяся структура организации требуют определения уточнения существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row coder-merch-mdDescriptionProduct">
+            <p class="text-left">Разнообразный и богатый опыт консультация с широким активом играет важную роль в формировании существенных финансовых и административных условий. Равным образом сложившаяся структура организации требуют определения уточнения существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в формировании модели развития. Не следует, однако забывать, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</p>
+          </div>
+
+        </div>            
+      </div>
+
+      <!-- Контейнер с заголовком "ПОХОЖИЕ ТОВАРЫ" -->
+      <div class="coder-merch-greyLineWrap">
+        <div class="container">
+          <p class="text-center">ПОХОЖИЕ ТОВАРЫ</p>
+        </div>
+      </div>
+
+      <!-- Контейнер с фотографиями похожих товаров -->
+      <!-- <div class="d-flex flex-wrap container coder-merch-similarProductsWrap"> -->
+      <div class="container">
+        <div class="row flex-wrap row justify-content-around align-items-center coder-merch-similarProductsWrap">
+          <a class="" href="#" role="button" data-slide="">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </a>
+          <div class="col-4 col-sm-4 offset-sm-1 col-md-3 ">
+            <img src="../static/img/product/product5.jpg" alt="..." class="img-thumbnail">
+          </div>
+          <div class="col-4 col-sm-4 col-md-3">
+            <img src="../static/img/product/product6.jpg" alt="..." class="img-thumbnail">
+          </div>
+          <div class="col-4 col-sm-4 col-md-3">
+            <img src="../static/img/product/product7.jpg" alt="..." class="img-thumbnail">
+          </div>
+          <div class="col-4 col-sm-4 col-md-3">
+            <img src="../static/img/product/product8.jpg" alt="..." class="img-thumbnail">
+          </div>
+          <a class="" href="#" role="button" data-slide="">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+    
+
+
+    <!-- Footer -->
+    <footer class="page-footer text-center font-small grey darken-3 wow fadeIn">
+      <!-- Footer Elements -->
+      <div class="container">  
+        <!-- Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12">
+            <div class="flex-center p-2">
+              <a href="#" class="header-basket-color">
+                <i class="fab fa-vk fa-lg footer__social-icon m-2"></i>
+              </a>
+              <a href="#" class="">
+                <i class="fab fa-twitter fa-lg footer__social-icon m-2"></i>
+              </a>
+              <a href="#" class="">
+                <i class="fab fa-google-plus-g fa-lg footer__social-icon m-2"></i>
+              </a>
+              <a href="#" class="">
+                <i class="fab fa-linkedin-in fa-lg footer__social-icon m-2"></i>
+              </a>
+              <a href="#" class="">
+                <i class="fab fa-instagram fa-lg footer__social-icon m-2"></i>
+              </a>
+              <a href="#" class="">
+                <i class="fab fa-pinterest fa-lg footer__social-icon m-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center d-flex flex-column coder-merch-footerCopyright">
+        <a href="#" class=" py-3"><img src="../static/img/logo_down.png" alt=""></a>
+        <p class="">&copy;&nbsp;Copyright&nbsp;2019:<a href="#"> Team CoderMerch</a></p>
+      </div>
+    </footer>
+    <!-- Footer -->
+    
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../static/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../static/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../static/js/mdb.js"></script>
+    <!-- Включение анимации -->
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.first-button').on('click', function () {
+                $('.animated-icon1').toggleClass('open');
+            });
+        });
+    </script>
+  </body>
+</html>
