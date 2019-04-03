@@ -7,6 +7,7 @@ html, body
 
 // ширина контента
 $main-width: 1200px
+$custom-font: "Phosphate - Inline"
 
 // кастомный шрифт
 @font-face
@@ -19,6 +20,7 @@ $main-width: 1200px
 /* --- Начало: прижатие футера --- */
 main
   flex: 1 0 auto
+  background-color: #f6f6f6
 
 footer
   flex: 0 0 auto
@@ -236,13 +238,37 @@ main
   width: 100%
 
 .coder-merch-custom-font
-  font-family: "Phosphate - Inline"
+  font-family: $custom-font
 
 .coder-merch-main-new-size
   max-width: $main-width
 
 .coder-merch-main-new-size-photo
   max-height: 165px
+
+.coder-merch-goods-text
+  color: #00dff0
+
+.coder-merch-goods-price
+  color: #a6e22e
+  font-size: 40px
+
+.coder-merch-goods-photo
+  background-size: cover
+  width: 288px
+  height: 288px
+
+.coder-merch-goods-photo:hover
+  .coder-merch-goods-description
+    display: flex
+
+
+.coder-merch-goods-description
+  display: none
+  width: 100%
+  height: 100%
+  opacity: .9
+
 
 
 /* --- Начало: Медиазапросы --- */
@@ -257,4 +283,12 @@ main
 
 
 /* --- Конец: Медиазапросы --- */
+
+
+
+
+
+
+
+
 
