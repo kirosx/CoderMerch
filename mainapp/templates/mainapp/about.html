@@ -3,19 +3,20 @@
 {% load staticfiles %}
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CoderMerch</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="static/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="static/css/mdb.min.css" rel="stylesheet">
-  <!-- Наши стили -->
-  <link href="static/css/CoderMerchStyle.css" rel="stylesheet">
-  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CoderMerch</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <!-- Наши стили -->
+    <link rel="stylesheet" href="{% static 'css/CoderMerchStyle.css' %}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png">
 </head>
 
 <body class="d-flex flex-column">
@@ -37,7 +38,7 @@
       </div>
       <div class="col-6 flex-wrap d-flex justify-content-end">
         <a href="#" class="text-white p-0 mx-2 sale-text font-weight-bold">SALE</a>
-        <a href="{% url 'about' %}" class="text-white p-0 mx-2">About team</a>
+        <a href="#" class="text-white p-0 mx-2">About team</a>
         <a href="#" class="text-white p-0 mx-2">Delivery-payment</a>
         <a href="#" class="text-white p-0 mx-2">Contact</a>
       </div>
@@ -46,8 +47,7 @@
 
   <div class="container wow fadeInDown">
     <!-- Navbar brand -->
-    <a class="navbar-brand pl-1 wow rollIn" href="#"><img class="coder-merch-brand-size" src="static/img/logo.png"
-                                                          alt=""></a>
+    <a class="navbar-brand pl-1 wow rollIn" href="#"><img class="coder-merch-brand-size" src="static/img/logo.png" alt=""></a>
 
     <!-- Гамбургер -->
     <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -67,7 +67,7 @@
           <div class="dropdown-menu dropdown-primary text-center grey lighten-1 wow fadeInRight"
                aria-labelledby="navbarDropdownMenuLink1">
             <a class="dropdown-item header-dropdown-item" href="#">Вся одежда</a>
-            <a class="dropdown-item header-dropdown-item" href="{% url 'products' %}">Мужская</a>
+            <a class="dropdown-item header-dropdown-item" href="#">Мужская</a>
             <a class="dropdown-item header-dropdown-item" href="#">Женская</a>
             <a class="dropdown-item header-dropdown-item" href="#">Мальчики</a>
             <a class="dropdown-item header-dropdown-item" href="#">Девочки</a>
@@ -122,6 +122,7 @@
 
 
 <main class="d-flex flex-column">
+
   <!-- Модалка для логина-->
   <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
        aria-hidden="true">
@@ -156,106 +157,88 @@
   </div>
   <!-- Модалка длялогина -->
 
-  <article class="container-fluid coder-merch-main-photo-color d-flex align-items-center justify-content-center">
-    <div>
-      <img src="../static/img/main_photo1.jpg" alt="" class="container d-block coder-merch-main-photo-size wow fadeIn">
+  <p class="container mt-3 coder-merch-about px-5">Главная > О команде</p>
+
+  <div class="container-fluid grey darken-2">
+    <h2 class="text-center text-uppercase py-2 m-0 coder-merch-custom-font cm-font-title wow fadeInRight">о команде</h2>
+  </div>
+  <p class="container coder-merch-about-title text-center py-4 my-0 font-weight-bolder">Данный проект разработан студентами GeekUniversity от&nbsp;GeekBrains Mail.Ru Group,
+    факультета Python-разработки. В&nbsp;проекте использованы технологии: Python&nbsp;3+,
+    Django Framework&nbsp;2+, Django REST Framework, HTML5/CSS3/SASS/Bootstrap,
+    Photoshop/Zeplin/Pixel Perfect, JS/AJAX/JQuery, PostgreSQL, GitHub/Trello/Discord.</p>
+  <h3 class="text-center mx-auto text-uppercase font-weight-bold">разработчики</h3>
+  <div class="container d-flex justify-content-center align-content-center flex-wrap">
+
+    <div class="coder-merch-about-blabla m-4">
+        <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+        <div class="text-uppercase font-weight-bold">вася пупкин</div>
+        Разрабатывает с 2 лет. <br>
+        Учился на слесаря <br>
+        <span class="font-weight-bold">Роль:</span> построил ракету
     </div>
-  </article>
-
-  <article class="container-fluid yellow lighten-2 my-3 shadow-drop-2-center">
-    <h2 class="text-center text-uppercase py-2 m-0 wow fadeInLeft">Реши легкую задачу и получи
-      <span class="font-weight-bold">10% скидки</span>
-    </h2>
-  </article>
-  <section>
-    <div class="container-fluid grey darken-2">
-      <h2 class="text-center text-uppercase py-2 m-0 coder-merch-custom-font cm-font-title wow fadeInRight">НОВЫЕ
-        ПОСТУПЛЕНИЯ</h2>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
     </div>
-    <div class="container-fluid d-flex justify-content-center align-content-center flex-wrap coder-merch-main-new-size my-3">
-
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product1.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product2.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product3.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product4.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product5.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product6.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
-        <div class="photobox__previewbox">
-          <img src="../static/img/product7.jpg" class="photobox__preview" alt="Preview">
-          <div class="photobox__label text-uppercase">
-            <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
-            <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
-          </div>
-        </div>
-      </div>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
     </div>
-  </section>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
+    </div>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
+    </div>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
+    </div>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
+    </div>
+    <div class="coder-merch-about-blabla m-4">
+      <div class="coder-merch-about-blabla-img"><img class="" src="../static/img/product1.jpg" alt="dev's avatar"></div>
+      <div class="text-uppercase font-weight-bold">вася пупкин</div>
+      Разрабатывает с 2 лет. <br>
+      Учился на слесаря <br>
+      <span class="font-weight-bold">Роль:</span> построил ракету
+    </div>
+
+  </div>
+
+
+<!--    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 about-blabla">-->
+<!--        <div class="about-blabla-img"><img class="" src="../static/img/Ilon-Mask.jpg" alt="dev's avatar"></div>-->
+<!--        <div class="text-uppercase font-weight-bold">вася пупкин</div>-->
+<!--        Разрабатывает с 2 лет. <br>-->
+<!--        Учился на слесаря <br>-->
+<!--        <span class="font-weight-bold">Роль:</span> построил ракету-->
+<!--    </div>-->
+
 </main>
+
 
 <!-- Footer -->
 <footer class="page-footer text-center font-small elegant-color-dark wow fadeIn">
@@ -297,7 +280,6 @@
   </div>
 </footer>
 <!-- Footer -->
-
 
 <!-- SCRIPTS -->
 <!-- JQuery -->

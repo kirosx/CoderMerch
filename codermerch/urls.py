@@ -20,6 +20,8 @@ from controllers import Views
 
 urlpatterns = [
     path('', Views.index, name='index'),
+    path('about/', Views.about, name='about'),
+    path('products/', Views.products, name='products'),
     path('test/', test_page, name='test'),
     path('admin/', admin.site.urls),
 ]

@@ -4,10 +4,20 @@
 
 html, body
   height: 100%
+  background-color: #f6f6f6
 
 // ширина контента
 $main-width: 1200px
 $custom-font: "Phosphate - Inline"
+
+//цвета
+$grey: #383838
+$black: #1e1e1e
+$yellow: #e6db74
+$blue: #66dgef
+$green: #a6e22e
+$white: #f6f6f6
+$pink: #f92672
 
 // кастомный шрифт
 @font-face
@@ -16,11 +26,22 @@ $custom-font: "Phosphate - Inline"
   font-style: normal
   font-weight: normal
 
+@font-face
+  font-family: 'Raleway'
+  src: url('../font/Raleway-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Raleway'
+  src: url('../font/Raleway-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+
 
 /* --- Начало: прижатие футера --- */
 main
   flex: 1 0 auto
-  background-color: #f6f6f6
 
 footer
   flex: 0 0 auto
@@ -206,6 +227,112 @@ footer
 /* --- Конец: Мозайка --- */
 
 
+/* --- Начало: страница about --- */
+.coder-merch-about
+  max-width: $main-width
+
+.coder-merch-about-title
+  max-width: 800px
+
+.coder-merch-about-blabla
+  font-family: Raleway
+  font-size: 14pt
+  text-align: center
+
+.coder-merch-about-blabla .coder-merch-about-blabla-img
+  width: 200px
+  height: 200px
+  border-radius: 50%
+  overflow: hidden
+  margin: 0 auto
+
+.coder-merch-about-blabla .coder-merch-about-blabla-img img
+  width: auto
+  height: 100%
+  margin: 0 -80px auto
+
+/* --- Конец: страница about --- */
+
+
+/* --- Начало: страница товары --- */
+
+.catalog-header
+  &-top
+    background-color: $black
+
+  &-bottom
+    background-color: $white
+
+    a
+      color: $black !important
+
+.catalog-header-top-list-item.active > .catalog-header-top-list-item-link
+  background-color: $white!important
+  color: $black !important
+
+.coder-merch-header
+  background-color: $grey
+  &-top
+    background-color: $black
+  &-bottom
+    justify-content: space-between
+    &-list
+      margin-block-start: 0
+      margin-block-end: 0
+      min-height: 59.02px
+      &-item
+        outline: 1px solid $black
+
+.coder-merch-header-bottom-list-item.active > .coder-merch-header-bottom-list-item-link
+  background-color: $black!important
+
+.catalog-menu
+  background-color: #ffffff
+  &-list
+    margin-block-start: 0
+    margin-block-end: 0
+    &-item
+      margin: 16px 0
+      min-width: 185px
+      &-link
+        border-radius: 30px
+        background-color: #eeeeee
+
+.catalog-menu-list-item.active > .catalog-menu-list-item-link
+  background-color: $grey!important
+  color: $yellow!important
+
+.sale-text
+  color: $pink!important
+
+.cm-font-title
+  color: $yellow
+
+.cm-bg-grey
+  background-color: $grey
+
+.cm-bg-black
+  background-color: $black
+
+.bg-tp-off
+  background-color: rgba(0,0,0,0)!important
+
+.cm-catalog-next
+  width: 350px
+  font-size: 33px
+  &:hover
+    background-color: $black
+    color: $yellow
+
+.catalog-preview-item
+  min-width: 280px
+  min-height: 280px
+
+/* --- Конец: страница товары --- */
+
+
+
+
 
 
 main
@@ -224,8 +351,22 @@ main
   transition: cubic-bezier(0, 0, 0, 1) 2s
 
 .coder-merch-search-bg
-  background-color: #616161
-  color: white
+  padding-left: 25px
+  background-color: $black
+  color: #323232
+  border: none
+  border-radius: 30px
+
+.coder-merch-search-place
+  position: relative
+
+.coder-merch-search-icon
+  position: absolute
+  top: 15%
+  margin-left: 5px
+  margin-top: 2px
+  z-index: 1
+  color: #4f5b66
 
 .coder-merch-brand-size
   max-width: 113px
@@ -271,6 +412,90 @@ main
 
 
 
+
+
+.photobox
+  display: inline-block
+
+
+.photobox__previewbox
+  position: relative
+  overflow: hidden
+
+
+.photobox__preview
+  display: block
+  max-width: 100%
+
+
+.photobox__previewbox:before
+  content: ""
+
+
+/* type 8 */
+
+.photobox_type8 .photobox__previewbox:before
+  width: 0
+  height: 0
+  padding: 25%
+
+  background-color: var(--photoboxOverlay, rgba(0, 0, 0, .8))
+  border-radius: 50%
+
+  position: absolute
+  top: 50%
+  left: 50%
+  z-index: 2
+
+  transition: transform calc(var(--photoboxAnimationDuration, .8s) / 2) ease
+  will-change: transform
+  transform: translate(-50%, -50%) scale(0)
+
+.photobox_type8:hover .photobox__previewbox:before
+  transform: translate(-50%, -50%) scale(4)
+  transition-duration: var(--photoboxAnimationDuration, .8s)
+
+.photobox_type8 .photobox__label
+  width: 95%
+  text-align: center
+
+  opacity: 0
+  transition: opacity calc(var(--photoboxAnimationDuration, .8s) / 4) cubic-bezier(0.71, 0.05, 0.29, 0.9), transform calc(var(--photoboxAnimationDuration, .8s) / 4) cubic-bezier(0.71, 0.05, 0.29, 0.9)
+  will-change: opacity, transform
+
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, 200%)
+  z-index: 3
+
+.photobox_type8:hover .photobox__label
+  opacity: 1
+  transform: translate(-50%, -50%)
+  transition-duration: calc(var(--photoboxAnimationDuration, .8s) / 2)
+  transition-delay: calc(var(--photoboxAnimationDuration, .8s) / 4)
+
+.photobox_type8 .photobox__preview
+  transition: transform calc(var(--photoboxAnimationDuration, .8s) / 2) cubic-bezier(0.71, 0.05, 0.29, 0.9)
+    will-change: transform
+  transform: scale(1) rotate(0)
+
+.photobox_type8:hover .photobox__preview
+  transform: scale(1.2) rotate(5deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --- Начало: Медиазапросы --- */
 @media screen and (max-width: 500px)
   main
@@ -281,8 +506,21 @@ main
     align-items: center
     justify-content: center
 
+@media screen and (max-width: 1199px)
+  main
+    padding-top: 127px
+  .coder-merch-header-bottom
+    min-height: 83px
+
+@media screen and (max-width: 420px)
+  .coder-merch-header-top
+    display: none!important
+  main
+    padding-top: 83px
 
 /* --- Конец: Медиазапросы --- */
+
+
 
 
 
