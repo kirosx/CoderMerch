@@ -46,7 +46,7 @@
 
   <div class="container wow fadeInDown">
     <!-- Navbar brand -->
-    <a class="navbar-brand pl-1 wow rollIn" href="#"><img class="coder-merch-brand-size" src="static/img/logo.png"
+    <a class="navbar-brand pl-1 wow rollIn" href="{% url 'home' %}"><img class="coder-merch-brand-size" src="static/img/logo.png"
                                                           alt=""></a>
 
     <!-- Гамбургер -->
@@ -105,13 +105,13 @@
         </form>
         <div class="mt-2 justify-content-around">
           <a href="#" class="mx-2 text-center" data-toggle="modal" data-target="#modalLoginForm">
-            <i class="far fa-user header-fa-size header-user-color wow swing delay-1s"></i>
+            <i class="far fa-user header-fa-size header-user-color wow swing delay-2s"></i>
           </a>
           <a href="#" class="mx-2 text-center">
-            <i class="far fa-heart header-fa-size header-heart-color wow swing delay-1s"></i>
+            <i class="far fa-heart header-fa-size header-heart-color wow swing delay-2s"></i>
           </a>
           <a href="#" class="mx-2 text-center">
-            <i class="fas fa-shopping-bag header-fa-size header-basket-color wow swing delay-1s"></i>
+            <i class="fas fa-shopping-bag header-fa-size header-basket-color wow swing delay-2s"></i>
           </a>
         </div>
       </div>
@@ -181,12 +181,10 @@
           <div class="photobox__label text-uppercase">
             <p class="coder-merch-goods-text my-3 font-weight-bolder">Толстовка "С++"</p>
             <h3 class="coder-merch-custom-font coder-merch-goods-price my-3">2990</h3>
-            <a href="#" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
+            <a href="{% url 'product' %}" class="btn yellow text-black-50 font-weight-bold px-5 py-1 my-3 mx-5">Подробнее</a>
           </div>
         </div>
       </div>
-
-
 
       <div class="photobox photobox_type8 coder-merch-goods-photo text-center mr-1 mb-1 wow pulse">
         <div class="photobox__previewbox">
