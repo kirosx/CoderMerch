@@ -19,7 +19,7 @@ from mainapp.views import test_page
 from controllers import Views
 
 urlpatterns = [
-    path('', Views.index, name='index'),
+    path('', Views.basket, name='basket'),
     path('test/', test_page, name='test'),
     path('admin/', admin.site.urls),
 ]
