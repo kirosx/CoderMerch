@@ -13,13 +13,34 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
-from mainapp.views import test_page
+from django.conf import settings
+from django.urls import path, include
+from django.conf.urls.static import static
+
 from controllers import Views
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', Views.index, name='index'),
-    path('test/', test_page, name='test'),
-    path('admin/', admin.site.urls),
+    path('', Views.HomeView.as_view(), name='home'),
+    path('about/', Views.AboutView.as_view(), name='about'),
+    path('products/', Views.ProductsView.as_view(), name='products'),
+    path('product/', Views.ProductView.as_view(), name='product'),
+    # path('admin/', admin.site.urls),
+    path('api/v1/', include('api.urls', namespace='api')),
+    path('accounts/', include('allauth.urls')),
+    path('favicon.ico',
+         RedirectView.as_view(url='/static/img/favicon.png'),
+         name='favicon'),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]
+
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )
