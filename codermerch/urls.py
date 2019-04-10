@@ -15,11 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainapp.views import test_page
+from django.conf.urls import include
+# from mainapp.views import test_page
 from controllers import Views
 
+
+
 urlpatterns = [
-    path('', Views.index, name='index'),
-    path('test/', test_page, name='test'),
+    path('api/v1.0/', include("mainapp.urls")),
+    path('', include("mainapp.urls")),
+    path('v1/', include('rest_framework.urls')),
+    # path('', include('mainapp.urls')),
+    # path('', Views.index, name='index'),
+    # path('product/', Views.product, name='product'),
+    # path('test/', test_page, name='test'),
     path('admin/', admin.site.urls),
+    # path('api-auth/', include('rest_framework.urls'))
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
