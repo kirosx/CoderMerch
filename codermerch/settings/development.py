@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -87,18 +88,18 @@ WSGI_APPLICATION = 'codermerch.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-
     'default': {
-        'NAME': 'codermerch',
-        'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'cmadmin',
-        'PASSWORD': get_secret('DB_PASSWORD'),
-        'HOST': '127.0.0.1'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
+    # 'default': {
+    #     'NAME': 'codermerch',
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'USER': 'cmadmin',
+    #     'PASSWORD': get_secret('DB_PASSWORD'),
+    #     'HOST': '127.0.0.1'
+    # }
 }
 
 # Password validation
@@ -148,3 +149,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # AUTH_USER_MODEL = 'authapp.CustomUser'
 
 LOGIN_URL = '/auth/login/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
