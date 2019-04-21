@@ -17,3 +17,11 @@ class ProductCategorySerializer(serializers.ModelSerializer):
         model = ProductCategory
         fields = ('name_category', 'products')
 
+
+class ProductDetailSerializer(serializers.ModelSerializer):
+    sizes = serializers.DictField(source='get_size')
+
+    class Meta:
+        model = Product
+        fields = ('name_product', 'sizes')
+
