@@ -18,6 +18,8 @@ def api_root(request, format=None):
                                    format=format),
         'user details': reverse('api:rest_user_details', request=request,
                                 format=format),
+	'products': reverse('models:product-list', request=request, format=format),
+        'categories': reverse('models:productcategory-list', request=request, format=format),
     })
 
 
